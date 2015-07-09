@@ -1,0 +1,10 @@
+﻿-----------------------------------------
+Version 3.3
+-----------------------------------------
+- Fixed: ID high and low byte swapped
+- Added: Modbus paramater UNIT added to function calls 
+
+-----------------------------------------
+Version 3.2
+-----------------------------------------
+First release
