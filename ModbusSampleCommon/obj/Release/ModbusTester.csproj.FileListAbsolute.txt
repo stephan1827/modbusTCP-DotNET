@@ -1,0 +1,4 @@
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\obj\Release\ModbusTester.exe
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\obj\Release\ModbusTester.csprojResolveAssemblyReference.cache
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\obj\Release\Modbus.frmStart.resources
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\obj\Release\ModbusTester.csproj.GenerateResource.Cache

@@ -1,0 +1,11 @@
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Release\ModbusTCP.dll
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Release\ModbusTCP.pdb
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Release\ResolveAssemblyReference.cache
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Release\ModbusTCP.dll
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Release\ModbusTCP.pdb
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Debug\ModbusTCP.dll
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Debug\ModbusTCP.pdb
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Debug\ResolveAssemblyReference.cache
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.dll
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.pdb
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Release\ModbusTCP.XML

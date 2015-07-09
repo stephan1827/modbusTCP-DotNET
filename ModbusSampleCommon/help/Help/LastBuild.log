@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder GUI" version="1.7.0.0" projectFile="D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\modbusTCPhelp.shfb" started="6/14/2013 9:25:21 AM">
+<buildStep step="Initializing">
+</buildStep>
+<buildStep step="FindingTools">
+Finding tools...
+Found Sandcastle in 'C:\Program Files (x86)\Sandcastle\'
+Found HTML 1.x help compiler in 'C:\Program Files (x86)\HTML Help Workshop\'
+</buildStep>
+<buildStep step="ValidatingAssemblies">
+Validating and copying documentation assembly information...
+    D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Release\ModbusTCP.dll -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\ModbusTCP.dll
+    D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Release\ModbusTCP.XML -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\ModbusTCP.XML
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+    Last step completed in 00:00:00.0080
+</buildStep>
+<buildStep step="CopyDependencies">
+Copying documentation assembly dependencies...
+No dependencies to copy
+    Last step completed in 00:00:00.0030
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\GenerateRefInfo.bat]
+MrefBuilder (v2.4.10520.1)
+Copyright c Microsoft 2006
+Info: Loaded 1 assemblies for reflection and 0 dependency assemblies.
+Info: Wrote information on 1 namespaces, 3 types, and 39 members
+        1 file(s) copied.
+XslTransform (v2.4.10520.1)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
+    Last step completed in 00:00:01.0431
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="ApplyVisibilityProperties">
+Applying visibility properties to reflection information file
+    0 attribute nodes removed
+    0 explicit interface implementations removed
+    0 local and base class EII elements removed
+    Last step completed in 00:00:00.0150
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\TransformManifest.bat]
+XslTransform (v2.4.10520.1)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files (x86)\Sandcastle\ProductionTransforms\ApplyPrototypeDocModel.xsl'.
+Info: Applying XSL transformation 'C:\Program Files (x86)\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl'.
+XslTransform (v2.4.10520.1)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
+    Last step completed in 00:00:00.9041
+</buildStep>
+<buildStep step="ModifyHelpTopicFilenames">
+Modifying help topic filenames in reflection information file
+    No changes required
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="CopyStandardContent">
+Copying standard help content...
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\alert_caution.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\alert_caution.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\alert_note.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\alert_note.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\alert_security.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\alert_security.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\Caution.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\Caution.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\CFW.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\CFW.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\collapse_all.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\collapse_all.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\copycode.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\copycode.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\expand_all.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\expand_all.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\LastChild.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\LastChild.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\NotLastChild.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\NotLastChild.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privclass.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privdelegate.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privenum.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privevent.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privfield.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privinterface.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privmethod.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privproperty.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\privstructure.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\privstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protclass.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protdelegate.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protenum.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protevent.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protfield.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protfield.png -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protfield.png
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protinterface.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protmethod.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protoperator.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protoperator.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protproperty.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\protstructure.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\protstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubclass.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubdelegate.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubenum.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubevent.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubfield.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubinterface.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubmethod.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\puboperator.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\puboperator.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubproperty.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\pubstructure.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\pubstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\security.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\security.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\icons\static.gif -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\icons\static.gif
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\CollapsibleSection.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\CollapsibleSection.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\CookieDataStore.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\CookieDataStore.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\ElementCollection.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\ElementCollection.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\EventUtilities.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\EventUtilities.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\LanguageFilter.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\LanguageFilter.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\MemberFilter.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\MemberFilter.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\script_prototype.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\script_prototype.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\SplitScreen.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\SplitScreen.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\scripts\StyleUtilities.js -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\scripts\StyleUtilities.js
+C:\Program Files (x86)\Sandcastle\Presentation\Prototype\styles\presentation.css -&gt; D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\styles\presentation.css
+    Last step completed in 00:00:00.3680
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="MergeTablesOfContent">
+Merging conceptual and additional tables of content...
+    Last step completed in 00:00:00.0100
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    conceptual.config
+    Last step completed in 00:00:00.0110
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\sandcastle.config
+    No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
+    Last step completed in 00:00:00.0100
+</buildStep>
+<buildStep step="BuildReferenceTopics">
+Building reference help topics...
+[D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\BuildReferenceTopics.bat]
+BuildAssembler (v2.4.10520.1)
+Copyright c Microsoft 2006
+Info: CopyFromFileComponent: Instantiating component.
+Info: CopyFromFileComponent: Loading data file 'C:\Program Files (x86)\Sandcastle\Presentation\Prototype\transforms\skeleton.xml'.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Searching for files that match '*.xml'.
+Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
+Info: CopyFromIndexComponent: Indexed 170145 elements in 107 files.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: ForEachComponent: Instantiating component.
+Info: ForEachComponent: Loading subcomponents.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: ForEachComponent: Loaded 1 subcomponents.
+Info: IfThenComponent: Instantiating component.
+Info: SyntaxComponent: Instantiating component.
+Info: SyntaxComponent: Loaded 3 syntax generators.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Searching for files that match 'C:\Windows\Microsoft.NET\Framework\v2.0.50727\en\*.xml'.
+Info: CopyFromIndexComponent: Searching for files that match 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\ModbusTCP.XML'.
+Info: CopyFromIndexComponent: Indexed 81330 elements in 50 files.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: ForEachComponent: Instantiating component.
+Info: ForEachComponent: Loading subcomponents.
+Info: IfThenComponent: Instantiating component.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: ForEachComponent: Loaded 2 subcomponents.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Loaded 0 copy components.
+Info: ShowMissingComponent: Instantiating component.
+Info: ShowMissingComponent: 
+    [Sandcastle Help File Builder Components, version 1.7.0.0]
+    Show Missing Documentation Component. Copyright c 2006-2008, Eric Woodruff, All Rights Reserved
+    http://www.codeplex.com/SHFB
+Info: VersionInfoComponent: Instantiating component.
+Info: VersionInfoComponent: 
+    [Sandcastle Help File Builder Components, version 1.7.0.0]
+    Version Information Component. Copyright c 2006-2008, Eric Woodruff, All Rights Reserved
+    http://www.codeplex.com/SHFB
+Info: CodeBlockComponent: Instantiating component.
+Info: CodeBlockComponent: 
+    [Sandcastle Help File Builder Components, version 1.7.0.0]
+    Code Block Component. Copyright c 2006-2008, Eric Woodruff, All Rights Reserved.
+    Portions copyright (c) 2003, Jonathan de Halleux, All rights reserved.
+    http://www.codeplex.com/SHFB
+Info: TransformComponent: Instantiating component.
+Info: PostTransformComponent: Instantiating component.
+Info: PostTransformComponent: 
+    [Sandcastle Help File Builder Components, version 1.7.0.0]
+    Post-Transform Component. Copyright c 2006-2008, Eric Woodruff, All Rights Reserved
+    http://www.codeplex.com/SHFB
+Info: SharedContentComponent: Instantiating component.
+Info: SharedContentComponent: Searching for files that match 'C:\Program Files (x86)\Sandcastle\Presentation\Prototype\content\shared_content.xml'.
+Info: SharedContentComponent: Loading shared content file 'C:\Program Files (x86)\Sandcastle\Presentation\Prototype\content\shared_content.xml'.
+Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\Prototype\content\shared_content.xml.
+Info: SharedContentComponent: Searching for files that match 'C:\Program Files (x86)\Sandcastle\Presentation\Prototype\content\reference_content.xml'.
+Info: SharedContentComponent: Loading shared content file 'C:\Program Files (x86)\Sandcastle\Presentation\Prototype\content\reference_content.xml'.
+Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\Prototype\content\reference_content.xml.
+Info: SharedContentComponent: Searching for files that match 'C:\Program Files (x86)\Sandcastle\Presentation\Shared\content\syntax_content.xml'.
+Info: SharedContentComponent: Loading shared content file 'C:\Program Files (x86)\Sandcastle\Presentation\Shared\content\syntax_content.xml'.
+Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\Shared\content\syntax_content.xml.
+Info: SharedContentComponent: Searching for files that match 'SharedBuilderContent.xml'.
+Info: SharedContentComponent: Loading shared content file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\SharedBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'rootlink' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\SharedBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'producttitle' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\SharedBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'locationinformation' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\SharedBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'locale' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\SharedBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'copyright' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\SharedBuilderContent.xml'.
+Info: SharedContentComponent: Found 1 files in SharedBuilderContent.xml.
+Info: SharedContentComponent: Searching for files that match 'PresentationStyleBuilderContent.xml'.
+Info: SharedContentComponent: Loading shared content file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\PresentationStyleBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'header' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\PresentationStyleBuilderContent.xml'.
+Info: SharedContentComponent: Overriding shared content item 'footer' with value in file 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\PresentationStyleBuilderContent.xml'.
+Info: SharedContentComponent: Found 1 files in PresentationStyleBuilderContent.xml.
+Info: SharedContentComponent: Loaded 225 shared content items.
+Info: ResolveReferenceLinksComponent2: Instantiating component.
+Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
+Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files (x86)\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
+Info: ResolveReferenceLinksComponent2: Searching directory 'D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working' for targets files of the form 'reflection.xml'.
+Info: ResolveReferenceLinksComponent2: Loaded 170145 reference targets.
+Info: SaveComponent: Instantiating component.
+Info: BuildAssembler: Building topic R:Project
+Warn: SharedContentComponent: Missing shared content item. Tag:'include'; Id:'topictitle'.
+Warn: SharedContentComponent: Missing shared content item. Tag:'include'; Id:'topictitle'.
+Info: BuildAssembler: Building topic N:ModbusTCP
+Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ModbusTCP
+Info: BuildAssembler: Building topic T:ModbusTCP.Master
+Warn: ResolveReferenceLinksComponent2: MSDN URL not found for target 'M:System.Object.Equals(System.Object)'.
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master..ctor
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.ReadCoils
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.ReadDiscreteInputs
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.ReadHoldingRegister
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.ReadInputRegister
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.WriteSingleCoils
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.WriteMultipleCoils
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.WriteSingleRegister
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.WriteMultipleRegister
+Info: BuildAssembler: Building topic Overload:ModbusTCP.Master.ReadWriteMultipleRegister
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.#ctor
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.#ctor(System.String,System.UInt16)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.connect(System.String,System.UInt16)
+Info: BuildAssembler: Building topic P:ModbusTCP.Master.connected
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.disconnect
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.Dispose
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excAck
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excExceptionConnectionLost
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excExceptionNotConnected
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excExceptionTimeout
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excGatePathUnavailable
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excIllegalDataAdr
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excIllegalDataVal
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excIllegalFunction
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excSlaveDeviceFailure
+Info: BuildAssembler: Building topic F:ModbusTCP.Master.excSlaveIsBusy
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.Finalize
+Info: BuildAssembler: Building topic E:ModbusTCP.Master.OnException
+Info: BuildAssembler: Building topic E:ModbusTCP.Master.OnResponseData
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadCoils(System.UInt16,System.Byte,System.UInt16,System.UInt16)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadCoils(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadDiscreteInputs(System.UInt16,System.Byte,System.UInt16,System.UInt16)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadDiscreteInputs(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadHoldingRegister(System.UInt16,System.Byte,System.UInt16,System.UInt16)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadHoldingRegister(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadInputRegister(System.UInt16,System.Byte,System.UInt16,System.UInt16)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadInputRegister(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadWriteMultipleRegister(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.Byte[])
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.ReadWriteMultipleRegister(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.Byte[],System.Byte[]@)
+Info: BuildAssembler: Building topic P:ModbusTCP.Master.refresh
+Info: BuildAssembler: Building topic P:ModbusTCP.Master.timeout
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteMultipleCoils(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.Byte[])
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteMultipleCoils(System.UInt16,System.Byte,System.UInt16,System.UInt16,System.Byte[],System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteMultipleRegister(System.UInt16,System.Byte,System.UInt16,System.Byte[])
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteMultipleRegister(System.UInt16,System.Byte,System.UInt16,System.Byte[],System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteSingleCoils(System.UInt16,System.Byte,System.UInt16,System.Boolean)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteSingleCoils(System.UInt16,System.Byte,System.UInt16,System.Boolean,System.Byte[]@)
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteSingleRegister(System.UInt16,System.Byte,System.UInt16,System.Byte[])
+Info: BuildAssembler: Building topic M:ModbusTCP.Master.WriteSingleRegister(System.UInt16,System.Byte,System.UInt16,System.Byte[],System.Byte[]@)
+Info: BuildAssembler: Building topic T:ModbusTCP.Master.ExceptionData
+Info: BuildAssembler: Building topic T:ModbusTCP.Master.ResponseData
+Info: Processed 54 topics
+    Last step completed in 00:00:25.0015
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContent">
+Generating intermediate table of content file...
+[D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\GenerateIntermediateTOC.bat]
+XslTransform (v2.4.10520.1)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files (x86)\Sandcastle\ProductionTransforms\CreatePrototypeToc.xsl'.
+    Last step completed in 00:00:00.1890
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for Help 1.x and/or website...
+[D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\ExtractHtmlInfo.bat]
+Sandcastle Help File Builder HTML Extract, version 1.7.0.0
+Copyright c 2008, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
+Processed 54 HTML files
+Sorting keywords and generating See Also indices
+Saving Help 1.x keyword index to D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Documentation.hhk
+Saving Help 1.x table of content to D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Documentation.hhc
+    Last step completed in 00:00:00.2960
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContent">
+Generating HTML Help 1.x table of content file...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="UpdateTableOfContent">
+Updating table of content with additional content items and determining default topic...
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="GenerateHelpFileIndex">
+Generating HTML Help 1.x index file...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Generating HTML Help 1.x project file...
+    Last step completed in 00:00:00.0060
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Compiling HTML Help 1.x file...
+[D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Build1xHelpFile.bat]
+Microsoft HTML Help Compiler 4.74.8702
+
+
+
+Compiling d:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\Documentation.chm
+
+
+
+
+
+Compile time: 0 minutes, 0 seconds
+
+56	Topics
+
+539	Local links
+
+0	Internet links
+
+0	Graphics
+
+
+
+
+
+Created d:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusSampleCommon\help\Help\Working\Output\Documentation.chm, 88,407 bytes
+
+Compression decreased file by 370,464 bytes.
+
+    Last step completed in 00:00:00.8171
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.0450
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully.  Total time: 00:00:28.8499
+
+</buildStep>
+</shfbBuild>

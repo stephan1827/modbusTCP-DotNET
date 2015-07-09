@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModbusTCP</name>
+    </assembly>
+    <members>
+        <member name="T:ModbusTCP.Master">
+            <summary>
+            Modbus TCP common driver class. This class implements a modbus TCP master driver.
+            It supports the following commands:
+            
+            Read coils
+            Read discrete inputs
+            Write single coil
+            Write multiple cooils
+            Read holding register
+            Read input register
+            Write single register
+            Write multiple register
+            
+            All commands can be sent in synchronous or asynchronous mode. If a value is accessed
+            in synchronous mode the program will stop and wait for slave to response. If the 
+            slave didn't answer within a specified time a timeout exception is called.
+            The class uses multi threading for both synchronous and asynchronous access. For
+            the communication two lines are created. This is necessary because the synchronous
+            thread has to wait for a previous command to finish.
+            
+            </summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excIllegalFunction">
+            <summary>Constant for exception illegal function.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excIllegalDataAdr">
+            <summary>Constant for exception illegal data address.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excIllegalDataVal">
+            <summary>Constant for exception illegal data value.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excSlaveDeviceFailure">
+            <summary>Constant for exception slave device failure.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excAck">
+            <summary>Constant for exception acknowledge.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excSlaveIsBusy">
+            <summary>Constant for exception slave is busy/booting up.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excGatePathUnavailable">
+            <summary>Constant for exception gate path unavailable.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excExceptionNotConnected">
+            <summary>Constant for exception not connected.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excExceptionConnectionLost">
+            <summary>Constant for exception connection lost.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excExceptionTimeout">
+            <summary>Constant for exception response timeout.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excExceptionOffset">
+            <summary>Constant for exception wrong offset.</summary>
+        </member>
+        <member name="F:ModbusTCP.Master.excSendFailt">
+            <summary>Constant for exception send failt.</summary>
+        </member>
+        <member name="M:ModbusTCP.Master.#ctor">
+            <summary>Create master instance without parameters.</summary>
+        </member>
+        <member name="M:ModbusTCP.Master.#ctor(System.String,System.UInt16)">
+            <summary>Create master instance with parameters.</summary>
+            <param name="ip">IP adress of modbus slave.</param>
+            <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.connect(System.String,System.UInt16)">
+            <summary>Start connection to slave.</summary>
+            <param name="ip">IP adress of modbus slave.</param>
+            <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.disconnect">
+            <summary>Stop connection to slave.</summary>
+        </member>
+        <member name="M:ModbusTCP.Master.Finalize">
+            <summary>Destroy master instance.</summary>
+        </member>
+        <member name="M:ModbusTCP.Master.Dispose">
+            <summary>Destroy master instance</summary>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadCoils(System.UInt16,System.UInt16,System.UInt16)">
+            <summary>Read coils from slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadCoils(System.UInt16,System.UInt16,System.UInt16,System.Byte[]@)">
+            <summary>Read coils from slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+            <param name="values">Contains the result of function.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadDiscreteInputs(System.UInt16,System.UInt16,System.UInt16)">
+            <summary>Read discrete inputs from slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadDiscreteInputs(System.UInt16,System.UInt16,System.UInt16,System.Byte[]@)">
+            <summary>Read discrete inputs from slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+            <param name="values">Contains the result of function.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadHoldingRegister(System.UInt16,System.UInt16,System.UInt16)">
+            <summary>Read holding registers from slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadHoldingRegister(System.UInt16,System.UInt16,System.UInt16,System.Byte[]@)">
+            <summary>Read holding registers from slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+            <param name="values">Contains the result of function.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadInputRegister(System.UInt16,System.UInt16,System.UInt16)">
+            <summary>Read input registers from slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadInputRegister(System.UInt16,System.UInt16,System.UInt16,System.Byte[]@)">
+            <summary>Read input registers from slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+            <param name="values">Contains the result of function.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteSingleCoils(System.UInt16,System.UInt16,System.Boolean)">
+            <summary>Write single coil in slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="OnOff">Specifys if the coil should be switched on or off.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteSingleCoils(System.UInt16,System.UInt16,System.Boolean,System.Byte[]@)">
+            <summary>Write single coil in slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="OnOff">Specifys if the coil should be switched on or off.</param>
+            <param name="result">Contains the result of the synchronous write.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteMultipleCoils(System.UInt16,System.UInt16,System.UInt16,System.Byte[])">
+            <summary>Write multiple coils in slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numBits">Specifys number of bits.</param>
+            <param name="values">Contains the bit information in byte format.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteMultipleCoils(System.UInt16,System.UInt16,System.UInt16,System.Byte[],System.Byte[]@)">
+            <summary>Write multiple coils in slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address from where the data read begins.</param>
+            <param name="numBits">Specifys number of bits.</param>
+            <param name="values">Contains the bit information in byte format.</param>
+            <param name="result">Contains the result of the synchronous write.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteSingleRegister(System.UInt16,System.UInt16,System.Byte[])">
+            <summary>Write single register in slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address to where the data is written.</param>
+            <param name="values">Contains the register information.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteSingleRegister(System.UInt16,System.UInt16,System.Byte[],System.Byte[]@)">
+            <summary>Write single register in slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address to where the data is written.</param>
+            <param name="values">Contains the register information.</param>
+            <param name="result">Contains the result of the synchronous write.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteMultipleRegister(System.UInt16,System.UInt16,System.Byte[])">
+            <summary>Write multiple registers in slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address to where the data is written.</param>
+            <param name="values">Contains the register information.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.WriteMultipleRegister(System.UInt16,System.UInt16,System.Byte[],System.Byte[]@)">
+            <summary>Write multiple registers in slave synchronous.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startAddress">Address to where the data is written.</param>
+            <param name="values">Contains the register information.</param>
+            <param name="result">Contains the result of the synchronous write.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadWriteMultipleRegister(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte[])">
+            <summary>Read/Write multiple registers in slave asynchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startReadAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+            <param name="startWriteAddress">Address to where the data is written.</param>
+            <param name="values">Contains the register information.</param>
+        </member>
+        <member name="M:ModbusTCP.Master.ReadWriteMultipleRegister(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte[],System.Byte[]@)">
+            <summary>Read/Write multiple registers in slave synchronous. The result is given in the response function.</summary>
+            <param name="id">Unique id that marks the transaction. In asynchonous mode this id is given to the callback function.</param>
+            <param name="startReadAddress">Address from where the data read begins.</param>
+            <param name="numInputs">Length of data.</param>
+            <param name="startWriteAddress">Address to where the data is written.</param>
+            <param name="values">Contains the register information.</param>
+            <param name="result">Contains the result of the synchronous command.</param>
+        </member>
+        <member name="E:ModbusTCP.Master.OnResponseData">
+            <summary>Response data event. This event is called when new data arrives</summary>
+        </member>
+        <member name="E:ModbusTCP.Master.OnException">
+            <summary>Exception data event. This event is called when the data is incorrect</summary>
+        </member>
+        <member name="P:ModbusTCP.Master.timeout">
+            <summary>Response timeout. If the slave didn't answers within in this time an exception is called.</summary>
+            <value>The default value is 500ms.</value>
+        </member>
+        <member name="P:ModbusTCP.Master.refresh">
+            <summary>Refresh timer for slave answer. The class is polling for answer every X ms.</summary>
+            <value>The default value is 10ms.</value>
+        </member>
+        <member name="P:ModbusTCP.Master.connected">
+            <summary>Shows if a connection is active.</summary>
+        </member>
+        <member name="T:ModbusTCP.Master.ResponseData">
+            <summary>Response data event. This event is called when new data arrives</summary>
+        </member>
+        <member name="T:ModbusTCP.Master.ExceptionData">
+            <summary>Exception data event. This event is called when the data is incorrect</summary>
+        </member>
+    </members>
+</doc>
