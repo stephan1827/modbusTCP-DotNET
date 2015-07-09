@@ -1,5 +1,0 @@
-D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.csprojResolveAssemblyReference.cache
-D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.dll
-D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.pdb
-D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Debug\ModbusTCP.dll
-D:\MyData\Visual Studio .NET\ModbusTCP\dev_Main\ModbusTCP\ModbusTCP\bin\Debug\ModbusTCP.pdb
