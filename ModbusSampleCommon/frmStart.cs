@@ -100,9 +100,9 @@ namespace Modbus
             this.grpData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpData.Location = new System.Drawing.Point(7, 194);
+            this.grpData.Location = new System.Drawing.Point(8, 230);
             this.grpData.Name = "grpData";
-            this.grpData.Size = new System.Drawing.Size(740, 271);
+            this.grpData.Size = new System.Drawing.Size(825, 234);
             this.grpData.TabIndex = 9;
             this.grpData.TabStop = false;
             this.grpData.Text = "Data";
@@ -115,35 +115,35 @@ namespace Modbus
             this.grpStart.Controls.Add(this.label1);
             this.grpStart.Controls.Add(this.btnConnect);
             this.grpStart.Controls.Add(this.txtIP);
-            this.grpStart.Location = new System.Drawing.Point(7, 7);
+            this.grpStart.Location = new System.Drawing.Point(8, 8);
             this.grpStart.Name = "grpStart";
-            this.grpStart.Size = new System.Drawing.Size(740, 55);
+            this.grpStart.Size = new System.Drawing.Size(825, 64);
             this.grpStart.TabIndex = 11;
             this.grpStart.TabStop = false;
             this.grpStart.Text = "Start communication";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(13, 28);
+            this.label1.Location = new System.Drawing.Point(16, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 14);
+            this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "IP Address";
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(187, 21);
+            this.btnConnect.Location = new System.Drawing.Point(224, 24);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(86, 28);
+            this.btnConnect.Size = new System.Drawing.Size(104, 33);
             this.btnConnect.TabIndex = 6;
             this.btnConnect.Text = "Connect";
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(93, 25);
+            this.txtIP.Location = new System.Drawing.Point(112, 29);
             this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(87, 20);
+            this.txtIP.Size = new System.Drawing.Size(104, 22);
             this.txtIP.TabIndex = 5;
             this.txtIP.Text = "192.168.100.1";
             this.txtIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -167,9 +167,9 @@ namespace Modbus
             this.grpExchange.Controls.Add(this.label2);
             this.grpExchange.Controls.Add(this.txtStartAdress);
             this.grpExchange.Controls.Add(this.btnReadCoils);
-            this.grpExchange.Location = new System.Drawing.Point(7, 69);
+            this.grpExchange.Location = new System.Drawing.Point(8, 80);
             this.grpExchange.Name = "grpExchange";
-            this.grpExchange.Size = new System.Drawing.Size(740, 118);
+            this.grpExchange.Size = new System.Drawing.Size(825, 144);
             this.grpExchange.TabIndex = 12;
             this.grpExchange.TabStop = false;
             this.grpExchange.Text = "Data exhange";
@@ -177,44 +177,44 @@ namespace Modbus
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(13, 27);
+            this.label4.Location = new System.Drawing.Point(16, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 14);
+            this.label4.Size = new System.Drawing.Size(88, 16);
             this.label4.TabIndex = 25;
             this.label4.Text = "Unit";
             // 
             // txtUnit
             // 
-            this.txtUnit.Location = new System.Drawing.Point(87, 25);
+            this.txtUnit.Location = new System.Drawing.Point(104, 29);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(50, 20);
+            this.txtUnit.Size = new System.Drawing.Size(60, 22);
             this.txtUnit.TabIndex = 24;
             this.txtUnit.Text = "0";
             this.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnWriteMultipleReg
             // 
-            this.btnWriteMultipleReg.Location = new System.Drawing.Point(573, 76);
+            this.btnWriteMultipleReg.Location = new System.Drawing.Point(688, 88);
             this.btnWriteMultipleReg.Name = "btnWriteMultipleReg";
-            this.btnWriteMultipleReg.Size = new System.Drawing.Size(87, 35);
+            this.btnWriteMultipleReg.Size = new System.Drawing.Size(104, 50);
             this.btnWriteMultipleReg.TabIndex = 23;
             this.btnWriteMultipleReg.Text = "Write multiple register";
             this.btnWriteMultipleReg.Click += new System.EventHandler(this.btnWriteMultipleReg_Click);
             // 
             // btnWriteMultipleCoils
             // 
-            this.btnWriteMultipleCoils.Location = new System.Drawing.Point(573, 28);
+            this.btnWriteMultipleCoils.Location = new System.Drawing.Point(688, 32);
             this.btnWriteMultipleCoils.Name = "btnWriteMultipleCoils";
-            this.btnWriteMultipleCoils.Size = new System.Drawing.Size(87, 34);
+            this.btnWriteMultipleCoils.Size = new System.Drawing.Size(104, 49);
             this.btnWriteMultipleCoils.TabIndex = 22;
             this.btnWriteMultipleCoils.Text = "Write multiple coils";
             this.btnWriteMultipleCoils.Click += new System.EventHandler(this.btnWriteMultipleCoils_Click);
             // 
             // btnWriteSingleReg
             // 
-            this.btnWriteSingleReg.Location = new System.Drawing.Point(473, 76);
+            this.btnWriteSingleReg.Location = new System.Drawing.Point(568, 88);
             this.btnWriteSingleReg.Name = "btnWriteSingleReg";
-            this.btnWriteSingleReg.Size = new System.Drawing.Size(87, 35);
+            this.btnWriteSingleReg.Size = new System.Drawing.Size(104, 50);
             this.btnWriteSingleReg.TabIndex = 21;
             this.btnWriteSingleReg.Text = "Write single register";
             this.btnWriteSingleReg.Click += new System.EventHandler(this.btnWriteSingleReg_Click);
@@ -224,115 +224,115 @@ namespace Modbus
             this.groupBox1.Controls.Add(this.radWord);
             this.groupBox1.Controls.Add(this.radBytes);
             this.groupBox1.Controls.Add(this.radBits);
-            this.groupBox1.Location = new System.Drawing.Point(160, 21);
+            this.groupBox1.Location = new System.Drawing.Point(192, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(87, 90);
+            this.groupBox1.Size = new System.Drawing.Size(104, 104);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Show as";
             // 
             // radWord
             // 
-            this.radWord.Location = new System.Drawing.Point(13, 62);
+            this.radWord.Location = new System.Drawing.Point(16, 72);
             this.radWord.Name = "radWord";
-            this.radWord.Size = new System.Drawing.Size(67, 21);
+            this.radWord.Size = new System.Drawing.Size(80, 24);
             this.radWord.TabIndex = 2;
             this.radWord.Text = "Word";
             this.radWord.CheckedChanged += new System.EventHandler(this.ShowAs);
             // 
             // radBytes
             // 
-            this.radBytes.Location = new System.Drawing.Point(13, 42);
+            this.radBytes.Location = new System.Drawing.Point(16, 48);
             this.radBytes.Name = "radBytes";
-            this.radBytes.Size = new System.Drawing.Size(67, 20);
+            this.radBytes.Size = new System.Drawing.Size(80, 24);
             this.radBytes.TabIndex = 1;
             this.radBytes.Text = "Bytes";
             this.radBytes.CheckedChanged += new System.EventHandler(this.ShowAs);
             // 
             // radBits
             // 
-            this.radBits.Location = new System.Drawing.Point(13, 21);
+            this.radBits.Location = new System.Drawing.Point(16, 24);
             this.radBits.Name = "radBits";
-            this.radBits.Size = new System.Drawing.Size(67, 21);
+            this.radBits.Size = new System.Drawing.Size(80, 24);
             this.radBits.TabIndex = 0;
             this.radBits.Text = "Bits";
             this.radBits.CheckedChanged += new System.EventHandler(this.ShowAs);
             // 
             // btnWriteSingleCoil
             // 
-            this.btnWriteSingleCoil.Location = new System.Drawing.Point(473, 28);
+            this.btnWriteSingleCoil.Location = new System.Drawing.Point(568, 32);
             this.btnWriteSingleCoil.Name = "btnWriteSingleCoil";
-            this.btnWriteSingleCoil.Size = new System.Drawing.Size(87, 34);
+            this.btnWriteSingleCoil.Size = new System.Drawing.Size(104, 49);
             this.btnWriteSingleCoil.TabIndex = 19;
             this.btnWriteSingleCoil.Text = "Write single coil";
             this.btnWriteSingleCoil.Click += new System.EventHandler(this.btnWriteSingleCoil_Click);
             // 
             // btnReadInpReg
             // 
-            this.btnReadInpReg.Location = new System.Drawing.Point(373, 76);
+            this.btnReadInpReg.Location = new System.Drawing.Point(448, 88);
             this.btnReadInpReg.Name = "btnReadInpReg";
-            this.btnReadInpReg.Size = new System.Drawing.Size(87, 35);
+            this.btnReadInpReg.Size = new System.Drawing.Size(104, 50);
             this.btnReadInpReg.TabIndex = 18;
             this.btnReadInpReg.Text = "Read input register";
             this.btnReadInpReg.Click += new System.EventHandler(this.btnReadInpReg_Click);
             // 
             // btnReadHoldReg
             // 
-            this.btnReadHoldReg.Location = new System.Drawing.Point(373, 28);
+            this.btnReadHoldReg.Location = new System.Drawing.Point(448, 32);
             this.btnReadHoldReg.Name = "btnReadHoldReg";
-            this.btnReadHoldReg.Size = new System.Drawing.Size(87, 34);
+            this.btnReadHoldReg.Size = new System.Drawing.Size(104, 49);
             this.btnReadHoldReg.TabIndex = 17;
             this.btnReadHoldReg.Text = "Read holding register";
             this.btnReadHoldReg.Click += new System.EventHandler(this.btnReadHoldReg_Click);
             // 
             // btnReadDisInp
             // 
-            this.btnReadDisInp.Location = new System.Drawing.Point(273, 76);
+            this.btnReadDisInp.Location = new System.Drawing.Point(328, 88);
             this.btnReadDisInp.Name = "btnReadDisInp";
-            this.btnReadDisInp.Size = new System.Drawing.Size(87, 35);
+            this.btnReadDisInp.Size = new System.Drawing.Size(104, 50);
             this.btnReadDisInp.TabIndex = 16;
             this.btnReadDisInp.Text = "Read discrete inputs";
             this.btnReadDisInp.Click += new System.EventHandler(this.btnReadDisInp_Click);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(13, 78);
+            this.label3.Location = new System.Drawing.Point(16, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 14);
+            this.label3.Size = new System.Drawing.Size(88, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "Size";
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(87, 78);
+            this.txtSize.Location = new System.Drawing.Point(104, 90);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(50, 20);
+            this.txtSize.Size = new System.Drawing.Size(60, 22);
             this.txtSize.TabIndex = 14;
-            this.txtSize.Text = "32";
+            this.txtSize.Text = "100";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(13, 53);
+            this.label2.Location = new System.Drawing.Point(16, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 14);
+            this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "Start Adress";
             // 
             // txtStartAdress
             // 
-            this.txtStartAdress.Location = new System.Drawing.Point(87, 51);
+            this.txtStartAdress.Location = new System.Drawing.Point(104, 59);
             this.txtStartAdress.Name = "txtStartAdress";
-            this.txtStartAdress.Size = new System.Drawing.Size(50, 20);
+            this.txtStartAdress.Size = new System.Drawing.Size(60, 22);
             this.txtStartAdress.TabIndex = 12;
             this.txtStartAdress.Text = "0";
             this.txtStartAdress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnReadCoils
             // 
-            this.btnReadCoils.Location = new System.Drawing.Point(273, 28);
+            this.btnReadCoils.Location = new System.Drawing.Point(328, 32);
             this.btnReadCoils.Name = "btnReadCoils";
-            this.btnReadCoils.Size = new System.Drawing.Size(87, 34);
+            this.btnReadCoils.Size = new System.Drawing.Size(104, 49);
             this.btnReadCoils.TabIndex = 11;
             this.btnReadCoils.Text = "Read coils";
             this.btnReadCoils.CursorChanged += new System.EventHandler(this.btnReadCoils_Click);
@@ -340,13 +340,13 @@ namespace Modbus
             // 
             // frmStart
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(753, 471);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
+            this.ClientSize = new System.Drawing.Size(841, 471);
             this.Controls.Add(this.grpExchange);
             this.Controls.Add(this.grpStart);
             this.Controls.Add(this.grpData);
             this.Name = "frmStart";
-            this.Text = "ModbusTCP Tester V1.1";
+            this.Text = "ModbusTCP Tester V1.2";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.frmStart_Closing);
             this.Load += new System.EventHandler(this.frmStart_Load);
             this.SizeChanged += new System.EventHandler(this.frmStart_Resize);
@@ -402,7 +402,7 @@ namespace Modbus
 			try
 			{
 				// Create new modbus master and add event functions
-				MBmaster = new Master(txtIP.Text, 502);
+				MBmaster = new Master(txtIP.Text, 502, true);
 				MBmaster.OnResponseData += new ModbusTCP.Master.ResponseData(MBmaster_OnResponseData);
 				MBmaster.OnException	+= new ModbusTCP.Master.ExceptionData(MBmaster_OnException);
 				// Show additional fields, enable watchdog
@@ -423,7 +423,7 @@ namespace Modbus
 			ushort ID			= 1;
             byte unit           = Convert.ToByte(txtUnit.Text);
             ushort StartAddress = ReadStartAdr();
-			byte Length			= Convert.ToByte(txtSize.Text);
+            UInt16 Length = Convert.ToUInt16(txtSize.Text);
 
             MBmaster.ReadCoils(ID, unit, StartAddress, Length);
 		}
@@ -436,7 +436,7 @@ namespace Modbus
 			ushort ID			= 2;
             byte unit           = Convert.ToByte(txtUnit.Text);
             ushort StartAddress = ReadStartAdr();
-			byte Length			= Convert.ToByte(txtSize.Text);
+            UInt16 Length = Convert.ToUInt16(txtSize.Text);
 
 			MBmaster.ReadDiscreteInputs(ID, unit, StartAddress, Length);	
 		}
@@ -449,7 +449,7 @@ namespace Modbus
 			ushort ID			= 3;
             byte unit           = Convert.ToByte(txtUnit.Text);
             ushort StartAddress = ReadStartAdr();
-			byte Length			= Convert.ToByte(txtSize.Text);
+			UInt16 Length		= Convert.ToUInt16(txtSize.Text);
 
 			MBmaster.ReadHoldingRegister(ID, unit, StartAddress, Length);		
 		}
@@ -462,7 +462,7 @@ namespace Modbus
 			ushort ID			= 4;
             byte unit           = Convert.ToByte(txtUnit.Text);
             ushort StartAddress = ReadStartAdr();
-			byte Length			= Convert.ToByte(txtSize.Text);
+            UInt16 Length       = Convert.ToUInt16(txtSize.Text);
 
 			MBmaster.ReadInputRegister(ID, unit, StartAddress, Length);			
 		}
@@ -490,9 +490,10 @@ namespace Modbus
 			ushort ID			= 6;
             byte unit           = Convert.ToByte(txtUnit.Text);
             ushort StartAddress = ReadStartAdr();
+            UInt16 Length = Convert.ToUInt16(txtSize.Text);
 
-			data = GetData(Convert.ToByte(txtSize.Text));
-			MBmaster.WriteMultipleCoils(ID, unit, StartAddress, Convert.ToByte(txtSize.Text), data);		
+            data = GetData(Convert.ToUInt16(txtSize.Text));
+			MBmaster.WriteMultipleCoils(ID, unit, StartAddress, Length, data);		
 		}
 
 		// ------------------------------------------------------------------------
@@ -698,7 +699,7 @@ namespace Modbus
 			}
 			if(radBits.Checked)
 			{
-				int numBytes		= (byte)(num / 8 + (num % 8 > 0 ? 1 : 0));
+				int numBytes		= (num / 8 + (num % 8 > 0 ? 1 : 0));
 				data				= new Byte[numBytes];
 				BitArray bitArray	= new BitArray(bits);
 				bitArray.CopyTo(data, 0);
@@ -741,8 +742,9 @@ namespace Modbus
 			if(radWord.Checked == true)
 			{
 				if(data.Length < 2) return;
-				word = new int[data.Length/2];
-				for(int x=0;x<data.Length;x=x+2)
+                int length = data.Length / 2 + Convert.ToInt16(data.Length % 2 > 0);      
+                word = new int[length];
+				for(int x=0;x<length; x=x+2)
 				{
 					word[x/2] = data[x] * 256 + data[x+1];
 				}
@@ -786,5 +788,5 @@ namespace Modbus
 			}
 		}
 
-	}
+ 	}
 }
