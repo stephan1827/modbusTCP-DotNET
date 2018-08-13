@@ -27,6 +27,8 @@ namespace ModbusTCP
     /// The class uses multi threading for both synchronous and asynchronous access. For
     /// the communication two lines are created. This is necessary because the synchronous
     /// thread has to wait for a previous command to finish.
+    /// The synchronous channel can be disabled during connection. This can be necessary when
+    /// the slave only supports one connection.
     /// 
     /// </summary>
     public class Master
@@ -110,12 +112,11 @@ namespace ModbusTCP
         }
 
         // ------------------------------------------------------------------------
-        /// <summary>Refresh timer for slave answer. The class is polling for answer every X ms.</summary>
-        /// <value>The default value is 10ms.</value>
+        /// <summary>Displays the state of the synchronous channel</summary>
+        /// <value>True if channel was diabled during connection.</value>
         public bool NoSyncConnection
         {
             get { return _no_sync_connection; }
-            set { _no_sync_connection = value; }
         }
 
         // ------------------------------------------------------------------------
@@ -135,20 +136,32 @@ namespace ModbusTCP
         /// <summary>Create master instance with parameters.</summary>
         /// <param name="ip">IP adress of modbus slave.</param>
         /// <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
-        public Master(string ip, ushort port, bool _no_sync_connection)
+        public Master(string ip, ushort port)
         {
-            connect(ip, port, _no_sync_connection);
+            connect(ip, port, false);
+        }
+
+        // ------------------------------------------------------------------------
+        /// <summary>Create master instance with parameters.</summary>
+        /// <param name="ip">IP adress of modbus slave.</param>
+        /// <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
+        /// <param name="no_sync_connection">Disable sencond connection for synchronous requests</param>
+        public Master(string ip, ushort port, bool no_sync_connection)
+        {
+            connect(ip, port, no_sync_connection);
         }
 
         // ------------------------------------------------------------------------
         /// <summary>Start connection to slave.</summary>
         /// <param name="ip">IP adress of modbus slave.</param>
         /// <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
-        public void connect(string ip, ushort port, bool _no_sync_connection)
+        /// <param name="no_sync_connection">Disable sencond connection for synchronous requests</param>
+        public void connect(string ip, ushort port, bool no_sync_connection)
         {
             try
             {
                 IPAddress _ip;
+                _no_sync_connection = no_sync_connection;
                 if (IPAddress.TryParse(ip, out _ip) == false)
                 {
                     IPHostEntry hst = Dns.GetHostEntry(ip);
