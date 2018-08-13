@@ -75,10 +75,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ModbusTCP, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\ModbusTCP.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -106,6 +102,12 @@
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModbusTCP\ModbusTCP\ModbusTCP.csproj">
+      <Project>{78a23b5b-cb72-4edb-b594-5370d086197d}</Project>
+      <Name>ModbusTCP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
