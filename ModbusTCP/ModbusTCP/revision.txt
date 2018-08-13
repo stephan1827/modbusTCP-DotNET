@@ -1,4 +1,10 @@
 ﻿-----------------------------------------
+Version 3.4
+-----------------------------------------
+- Added: Option to disable synchronous channel to limit number of connections to one
+- Added: Trigger exception if number of registers (250) or discrete values (2000) is exceeded
+
+-----------------------------------------
 Version 3.3
 -----------------------------------------
 - Fixed: ID high and low byte swapped

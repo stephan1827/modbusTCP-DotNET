@@ -73,6 +73,7 @@ namespace ModbusTCP
         private static ushort _timeout = 500;
         private static ushort _refresh = 10;
         private static bool _connected = false;
+        private static bool _no_sync_connection = false;
 
         private Socket tcpAsyCl;
         private byte[] tcpAsyClBuffer = new byte[2048];
@@ -109,6 +110,15 @@ namespace ModbusTCP
         }
 
         // ------------------------------------------------------------------------
+        /// <summary>Refresh timer for slave answer. The class is polling for answer every X ms.</summary>
+        /// <value>The default value is 10ms.</value>
+        public bool NoSyncConnection
+        {
+            get { return _no_sync_connection; }
+            set { _no_sync_connection = value; }
+        }
+
+        // ------------------------------------------------------------------------
         /// <summary>Shows if a connection is active.</summary>
         public bool connected
         {
@@ -125,16 +135,16 @@ namespace ModbusTCP
         /// <summary>Create master instance with parameters.</summary>
         /// <param name="ip">IP adress of modbus slave.</param>
         /// <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
-        public Master(string ip, ushort port)
+        public Master(string ip, ushort port, bool _no_sync_connection)
         {
-            connect(ip, port);
+            connect(ip, port, _no_sync_connection);
         }
 
         // ------------------------------------------------------------------------
         /// <summary>Start connection to slave.</summary>
         /// <param name="ip">IP adress of modbus slave.</param>
         /// <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
-        public void connect(string ip, ushort port)
+        public void connect(string ip, ushort port, bool _no_sync_connection)
         {
             try
             {
@@ -153,11 +163,14 @@ namespace ModbusTCP
                 tcpAsyCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.NoDelay, 1);
                 // ----------------------------------------------------------------
                 // Connect synchronous client
-                tcpSynCl = new Socket(IPAddress.Parse(ip).AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-                tcpSynCl.Connect(new IPEndPoint(IPAddress.Parse(ip), port));
-                tcpSynCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.SendTimeout, _timeout);
-                tcpSynCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, _timeout);
-                tcpSynCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.NoDelay, 1);
+                if (!_no_sync_connection)
+                {
+                    tcpSynCl = new Socket(IPAddress.Parse(ip).AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                    tcpSynCl.Connect(new IPEndPoint(IPAddress.Parse(ip), port));
+                    tcpSynCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.SendTimeout, _timeout);
+                    tcpSynCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, _timeout);
+                    tcpSynCl.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.NoDelay, 1);
+                }
                 _connected = true;
             }
             catch (System.IO.IOException error)
@@ -209,7 +222,7 @@ namespace ModbusTCP
 
         internal void CallException(ushort id, byte unit, byte function, byte exception)
         {
-            if ((tcpAsyCl == null) || (tcpSynCl == null)) return;
+            if ((tcpAsyCl == null) || (tcpSynCl == null && _no_sync_connection)) return;
             if (exception == excExceptionConnectionLost)
             {
                 tcpSynCl = null;
@@ -232,6 +245,11 @@ namespace ModbusTCP
         /// <param name="numInputs">Length of data.</param>
         public void ReadCoils(ushort id, byte unit, ushort startAddress, ushort numInputs)
         {
+            if (numInputs > 2000)
+            {
+                CallException(id, unit, fctReadCoil, excIllegalDataVal);
+                return;
+            }
             WriteAsyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadCoil), id);
         }
 
@@ -244,6 +262,11 @@ namespace ModbusTCP
         /// <param name="values">Contains the result of function.</param>
         public void ReadCoils(ushort id, byte unit, ushort startAddress, ushort numInputs, ref byte[] values)
         {
+            if (numInputs > 2000)
+            {
+                CallException(id, unit, fctReadCoil, excIllegalDataVal);
+                return;
+            }
             values = WriteSyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadCoil), id);
         }
 
@@ -255,6 +278,11 @@ namespace ModbusTCP
         /// <param name="numInputs">Length of data.</param>
         public void ReadDiscreteInputs(ushort id, byte unit, ushort startAddress, ushort numInputs)
         {
+            if (numInputs > 2000)
+            {
+                CallException(id, unit, fctReadDiscreteInputs, excIllegalDataVal);
+                return;
+            }
             WriteAsyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadDiscreteInputs), id);
         }
 
@@ -267,6 +295,11 @@ namespace ModbusTCP
         /// <param name="values">Contains the result of function.</param>
         public void ReadDiscreteInputs(ushort id, byte unit, ushort startAddress, ushort numInputs, ref byte[] values)
         {
+            if (numInputs > 2000)
+            {
+                CallException(id, unit, fctReadDiscreteInputs, excIllegalDataVal);
+                return;
+            }
             values = WriteSyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadDiscreteInputs), id);
         }
 
@@ -278,6 +311,11 @@ namespace ModbusTCP
         /// <param name="numInputs">Length of data.</param>
         public void ReadHoldingRegister(ushort id, byte unit, ushort startAddress, ushort numInputs)
         {
+            if (numInputs > 125)
+            {
+                CallException(id, unit, fctReadHoldingRegister, excIllegalDataVal);
+                return;
+            }
             WriteAsyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadHoldingRegister), id);
         }
 
@@ -290,6 +328,11 @@ namespace ModbusTCP
         /// <param name="values">Contains the result of function.</param>
         public void ReadHoldingRegister(ushort id, byte unit, ushort startAddress, ushort numInputs, ref byte[] values)
         {
+            if (numInputs > 125)
+            {
+                CallException(id, unit, fctReadHoldingRegister, excIllegalDataVal);
+                return;
+            }
             values = WriteSyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadHoldingRegister), id);
         }
 
@@ -301,6 +344,11 @@ namespace ModbusTCP
         /// <param name="numInputs">Length of data.</param>
         public void ReadInputRegister(ushort id, byte unit, ushort startAddress, ushort numInputs)
         {
+            if (numInputs > 125)
+            {
+                CallException(id, unit, fctReadInputRegister, excIllegalDataVal);
+                return;
+            }
             WriteAsyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadInputRegister), id);
         }
 
@@ -313,6 +361,11 @@ namespace ModbusTCP
         /// <param name="values">Contains the result of function.</param>
         public void ReadInputRegister(ushort id, byte unit, ushort startAddress, ushort numInputs, ref byte[] values)
         {
+            if (numInputs > 125)
+            {
+                CallException(id, unit, fctReadInputRegister, excIllegalDataVal);
+                return;
+            }
             values = WriteSyncData(CreateReadHeader(id, unit, startAddress, numInputs, fctReadInputRegister), id);
         }
 
@@ -356,7 +409,13 @@ namespace ModbusTCP
         /// <param name="values">Contains the bit information in byte format.</param>
         public void WriteMultipleCoils(ushort id, byte unit, ushort startAddress, ushort numBits, byte[] values)
         {
-            byte numBytes = Convert.ToByte(values.Length);
+            ushort numBytes = Convert.ToUInt16(values.Length);
+            if(numBytes > 250 || numBits > 2000)
+            {
+                CallException(id, unit, fctWriteMultipleCoils, excIllegalDataVal);
+                return;
+            }
+
             byte[] data;
             data = CreateWriteHeader(id, unit, startAddress, numBits, (byte)(numBytes + 2), fctWriteMultipleCoils);
             Array.Copy(values, 0, data, 13, numBytes);
@@ -373,7 +432,13 @@ namespace ModbusTCP
         /// <param name="result">Contains the result of the synchronous write.</param>
         public void WriteMultipleCoils(ushort id, byte unit, ushort startAddress, ushort numBits, byte[] values, ref byte[] result)
         {
-            byte numBytes = Convert.ToByte(values.Length);
+            ushort numBytes = Convert.ToUInt16(values.Length);
+            if (numBytes > 250 || numBits > 2000)
+            {
+                CallException(id, unit, fctWriteMultipleCoils, excIllegalDataVal);
+                return;
+            }
+
             byte[] data;
             data = CreateWriteHeader(id, unit, startAddress, numBits, (byte)(numBytes + 2), fctWriteMultipleCoils);
             Array.Copy(values, 0, data, 13, numBytes);
@@ -420,6 +485,12 @@ namespace ModbusTCP
         public void WriteMultipleRegister(ushort id, byte unit, ushort startAddress, byte[] values)
         {
             ushort numBytes = Convert.ToUInt16(values.Length);
+            if (numBytes > 250)
+            {
+                CallException(id, unit, fctWriteMultipleRegister, excIllegalDataVal);
+                return;
+            }
+
             if (numBytes % 2 > 0) numBytes++;
             byte[] data;
 
@@ -438,6 +509,12 @@ namespace ModbusTCP
         public void WriteMultipleRegister(ushort id, byte unit, ushort startAddress, byte[] values, ref byte[] result)
         {
             ushort numBytes = Convert.ToUInt16(values.Length);
+            if (numBytes > 250)
+            {
+                CallException(id, unit, fctWriteMultipleRegister, excIllegalDataVal);
+                return;
+            }
+
             if (numBytes % 2 > 0) numBytes++;
             byte[] data;
 
@@ -457,6 +534,12 @@ namespace ModbusTCP
         public void ReadWriteMultipleRegister(ushort id, byte unit, ushort startReadAddress, ushort numInputs, ushort startWriteAddress, byte[] values)
         {
             ushort numBytes = Convert.ToUInt16(values.Length);
+            if (numBytes > 250)
+            {
+                CallException(id, unit, fctReadWriteMultipleRegister, excIllegalDataVal);
+                return;
+            }
+
             if (numBytes % 2 > 0) numBytes++;
             byte[] data;
 
@@ -477,6 +560,12 @@ namespace ModbusTCP
         public void ReadWriteMultipleRegister(ushort id, byte unit, ushort startReadAddress, ushort numInputs, ushort startWriteAddress, byte[] values, ref byte[] result)
         {
             ushort numBytes = Convert.ToUInt16(values.Length);
+            if (numBytes > 250)
+            {
+                CallException(id, unit, fctReadWriteMultipleRegister, excIllegalDataVal);
+                return;
+            }
+
             if (numBytes % 2 > 0) numBytes++;
             byte[] data;
 
@@ -573,7 +662,6 @@ namespace ModbusTCP
                 try
                 {
                     tcpAsyCl.BeginSend(write_data, 0, write_data.Length, SocketFlags.None, new AsyncCallback(OnSend), null);
-                    tcpAsyCl.BeginReceive(tcpAsyClBuffer, 0, tcpAsyClBuffer.Length, SocketFlags.None, new AsyncCallback(OnReceive), tcpAsyCl);
                 }
                 catch (SystemException)
                 {
@@ -587,13 +675,16 @@ namespace ModbusTCP
         // Write asynchronous data acknowledge
         private void OnSend(System.IAsyncResult result)
         {
+            Int32 size = tcpAsyCl.EndSend(result);
             if (result.IsCompleted == false) CallException(0xFFFF, 0xFF, 0xFF, excSendFailt);
+            else tcpAsyCl.BeginReceive(tcpAsyClBuffer, 0, tcpAsyClBuffer.Length, SocketFlags.None, new AsyncCallback(OnReceive), tcpAsyCl);
         }
 
         // ------------------------------------------------------------------------
         // Write asynchronous data response
         private void OnReceive(System.IAsyncResult result)
         {
+            tcpAsyCl.EndReceive(result);
             if (result.IsCompleted == false) CallException(0xFF, 0xFF, 0xFF,excExceptionConnectionLost);
 
             ushort id = SwapUInt16(BitConverter.ToUInt16(tcpAsyClBuffer, 0));
