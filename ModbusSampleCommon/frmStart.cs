@@ -346,7 +346,7 @@ namespace Modbus
             this.Controls.Add(this.grpStart);
             this.Controls.Add(this.grpData);
             this.Name = "frmStart";
-            this.Text = "ModbusTCP Tester V1.2";
+            this.Text = "ModbusTCP Tester V1.3";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.frmStart_Closing);
             this.Load += new System.EventHandler(this.frmStart_Load);
             this.SizeChanged += new System.EventHandler(this.frmStart_Resize);
@@ -505,8 +505,10 @@ namespace Modbus
             byte unit           = Convert.ToByte(txtUnit.Text);
             ushort StartAddress = ReadStartAdr();
 
-			data			= GetData(2);
-			txtSize.Text	= "1";
+			if (radBits.Checked) data = GetData(16);
+            else if (radBytes.Checked) data = GetData(2);
+            else data = GetData(1);
+            txtSize.Text	= "1";
 			txtData.Text	= data[0].ToString();
 
 			MBmaster.WriteSingleRegister(ID, unit, StartAddress, data);

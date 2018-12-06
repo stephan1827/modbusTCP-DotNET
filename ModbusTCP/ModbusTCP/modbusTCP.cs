@@ -235,7 +235,7 @@ namespace ModbusTCP
 
         internal void CallException(ushort id, byte unit, byte function, byte exception)
         {
-            if ((tcpAsyCl == null) || (tcpSynCl == null && _no_sync_connection)) return;
+            if ((tcpAsyCl == null) || (tcpSynCl == null && !_no_sync_connection)) return;
             if (exception == excExceptionConnectionLost)
             {
                 tcpSynCl = null;
@@ -466,6 +466,11 @@ namespace ModbusTCP
         /// <param name="values">Contains the register information.</param>
         public void WriteSingleRegister(ushort id, byte unit, ushort startAddress, byte[] values)
         {
+            if (values.GetUpperBound(0) != 1)
+            {
+                CallException(id, unit, fctReadCoil, excIllegalDataVal);
+                return;
+            }
             byte[] data;
             data = CreateWriteHeader(id, unit, startAddress, 1, 1, fctWriteSingleRegister);
             data[10] = values[0];
@@ -482,6 +487,11 @@ namespace ModbusTCP
         /// <param name="result">Contains the result of the synchronous write.</param>
         public void WriteSingleRegister(ushort id, byte unit, ushort startAddress, byte[] values, ref byte[] result)
         {
+            if (values.GetUpperBound(0) != 1)
+            {
+                CallException(id, unit, fctReadCoil, excIllegalDataVal);
+                return;
+            }
             byte[] data;
             data = CreateWriteHeader(id, unit, startAddress, 1, 1, fctWriteSingleRegister);
             data[10] = values[0];

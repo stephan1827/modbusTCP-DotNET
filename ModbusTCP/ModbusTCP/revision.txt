@@ -1,4 +1,10 @@
 ﻿-----------------------------------------
+Version 3.5
+-----------------------------------------
+- Fixed: Exception is not triggered when synchonous channel is disabled
+- Fixed: WriteSingleRegister now fires exception excIllegalDataVal if number of bytes is not 2
+
+-----------------------------------------
 Version 3.4
 -----------------------------------------
 - Added: Option to disable synchronous channel to limit number of connections to one
