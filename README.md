@@ -33,6 +33,14 @@ A sample application is included in the package that shows the basic features. I
 Remember that a lot of Modbus clients use a watchdog telegram to make sure the master is still active. If you don’t call this watchdog within a specified time, the slave will close the connection. This feature is used to avoid unused open ports when the connection is interrupted.
 
 ## History
+Version 3.5 (12/06/2018)
+- Fixed: Exception is not triggered when synchonous channel is disabled
+- Fixed: WriteSingleRegister now fires exception excIllegalDataVal if number of bytes is not 2
+
+Version 3.4 (01/01/2015)
+- Added: Option to disable synchronous channel to limit number of connections to one
+- Added: Trigger exception if number of registers (250) or discrete values (2000) is exceeded
+
 Version 3.3 (6/14/2013)
 
 - Fixed: ID high and low byte swapped
