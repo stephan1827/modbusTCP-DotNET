@@ -53,7 +53,7 @@ namespace ModbusTCP
         public const byte excIllegalDataVal = 3;
         /// <summary>Constant for exception slave device failure.</summary>
         public const byte excSlaveDeviceFailure = 4;
-        /// <summary>Constant for exception acknowledge.</summary>
+        /// <summary>Constant for exception acknowledge. This is triggered if a write request is executed while the watchdog has expired.</summary>
         public const byte excAck = 5;
         /// <summary>Constant for exception slave is busy/booting up.</summary>
         public const byte excSlaveIsBusy = 6;
@@ -707,8 +707,14 @@ namespace ModbusTCP
         // Write asynchronous data response
         private void OnReceive(System.IAsyncResult result)
         {
-            tcpAsyCl.EndReceive(result);
-            if (result.IsCompleted == false) CallException(0xFF, 0xFF, 0xFF,excExceptionConnectionLost);
+            if (tcpAsyCl == null) return;
+
+            try
+            {
+                tcpAsyCl.EndReceive(result);
+                if (result.IsCompleted == false) CallException(0xFF, 0xFF, 0xFF, excExceptionConnectionLost);
+            }
+            catch (Exception) { }
 
             ushort id = SwapUInt16(BitConverter.ToUInt16(tcpAsyClBuffer, 0));
             byte unit = tcpAsyClBuffer[6];

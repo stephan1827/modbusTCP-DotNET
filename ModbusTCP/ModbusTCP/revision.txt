@@ -1,4 +1,9 @@
-﻿-----------------------------------------
+-----------------------------------------
+Version 3.6
+-----------------------------------------
+- Fixed: Handle null reference in receive function block when cable is disconnected
+
+-----------------------------------------
 Version 3.5
 -----------------------------------------
 - Fixed: Exception is not triggered when synchonous channel is disabled
