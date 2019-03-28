@@ -6,11 +6,16 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
+/// <summary>
+/// Modbus TCP common driver class. 
+/// </summary>
 namespace ModbusTCP
 {
     /// <summary>
-    /// Modbus TCP common driver class. This class implements a modbus TCP master driver.
-    /// It supports the following commands:
+    /// Modbus TCP common driver class. 
+    /// </summary>
+    /// 
+    /// This class implements a modbus TCP master driver. It supports the following commands:
     /// 
     /// Read coils
     /// Read discrete inputs
@@ -30,7 +35,6 @@ namespace ModbusTCP
     /// The synchronous channel can be disabled during connection. This can be necessary when
     /// the slave only supports one connection.
     /// 
-    /// </summary>
     public class Master
     {
         // ------------------------------------------------------------------------
@@ -145,7 +149,7 @@ namespace ModbusTCP
         /// <summary>Create master instance with parameters.</summary>
         /// <param name="ip">IP adress of modbus slave.</param>
         /// <param name="port">Port number of modbus slave. Usually port 502 is used.</param>
-        /// <param name="no_sync_connection">Disable sencond connection for synchronous requests</param>
+        /// <param name="no_sync_connection">Disable second connection for synchronous requests</param>
         public Master(string ip, ushort port, bool no_sync_connection)
         {
             connect(ip, port, no_sync_connection);
