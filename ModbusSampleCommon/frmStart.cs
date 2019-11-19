@@ -61,8 +61,8 @@ namespace Modbus
 
 		#region Vom Windows Form-Designer generierter Code
 		/// <summary>
-		/// Erforderliche Methode für die Designerunterstützung. 
-		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+		/// Erforderliche Methode fÃ¼r die DesignerunterstÃ¼tzung. 
+		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geÃ¤ndert werden.
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -361,7 +361,7 @@ namespace Modbus
 		#endregion
 
 		/// <summary>
-		/// Der Haupteinstiegspunkt für die Anwendung.
+		/// Der Haupteinstiegspunkt fÃ¼r die Anwendung.
 		/// </summary>
 		[STAThread]
 		static void Main() 
@@ -746,9 +746,9 @@ namespace Modbus
 				if(data.Length < 2) return;
                 int length = data.Length / 2 + Convert.ToInt16(data.Length % 2 > 0);      
                 word = new int[length];
-				for(int x=0;x<length; x=x+2)
+				for(int x=0;x<length; x+=1)
 				{
-					word[x/2] = data[x] * 256 + data[x+1];
+					word[x] = data[x*2] * 256 + data[x*2+1];
 				}
 			}
 
