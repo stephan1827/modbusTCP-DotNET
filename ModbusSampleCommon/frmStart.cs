@@ -690,7 +690,7 @@ namespace Modbus
 					}
 					if(radWord.Checked)
 					{
-                        if ((x <= data.GetUpperBound(0)) && (ctrl.Text != ""))
+                        if ((x <= word.GetUpperBound(0)) && (ctrl.Text != ""))
                         {
                             try { word[x] = Convert.ToInt16(ctrl.Text); }
                             catch(SystemException) { word[x] = Convert.ToUInt16(ctrl.Text);};
