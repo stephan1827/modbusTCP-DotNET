@@ -33,6 +33,9 @@ A sample application is included in the package that shows the basic features. I
 Remember that a lot of Modbus clients use a watchdog telegram to make sure the master is still active. If you don’t call this watchdog within a specified time, the slave will close the connection. This feature is used to avoid unused open ports when the connection is interrupted.
 
 ## History
+Next Version (04/03/2022)
+- Fixed: Typo in sample 
+
 Version 3.6 (26/03/2019)
 - Fixed: Handle null reference in receive function block when cable is disconnected
 
